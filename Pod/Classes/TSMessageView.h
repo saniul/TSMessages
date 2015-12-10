@@ -11,6 +11,7 @@
 
 #define TSMessageViewAlpha 0.95
 
+@class TSBlurView;
 
 
 
@@ -43,6 +44,14 @@
 @property (nonatomic,strong) UIImage *errorIcon UI_APPEARANCE_SELECTOR;
 @property (nonatomic,strong) UIImage *successIcon UI_APPEARANCE_SELECTOR;
 @property (nonatomic,strong) UIImage *warningIcon UI_APPEARANCE_SELECTOR;
+
+///STOLEN CHANGES
+
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIImageView *backgroundImageView;
+@property (nonatomic, strong) TSBlurView *backgroundBlurView; // Only used in iOS 7
+
+///
 
 
 

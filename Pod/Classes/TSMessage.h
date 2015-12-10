@@ -34,6 +34,9 @@
 @protocol TSMessageViewProtocol<NSObject>
 
 @optional
+- (Class)messageViewClass;
+
+@optional
 /** Implement this method to pass a custom position for a specific message */
 - (CGFloat)messageLocationOfMessageView:(TSMessageView *)messageView;
 

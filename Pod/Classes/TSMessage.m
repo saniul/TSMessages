@@ -131,8 +131,9 @@ __weak static UIViewController *_defaultViewController;
                               atPosition:(TSMessageNotificationPosition)messagePosition
                     canBeDismissedByUser:(BOOL)dismissingEnabled
 {
+    Class klass = [[TSMessage sharedMessage].delegate messageViewClass];
     // Create the TSMessageView
-    TSMessageView *v = [[TSMessageView alloc] initWithTitle:title
+    TSMessageView *v = [[klass alloc] initWithTitle:title
                                                    subtitle:subtitle
                                                       image:image
                                                        type:type
